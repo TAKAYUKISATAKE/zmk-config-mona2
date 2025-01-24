@@ -22,6 +22,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        number00: number00 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_0 &kp NUMBER_0>;
+            label = "NUMBER00";
+        };
     };
 
     behaviors {
@@ -50,7 +57,7 @@
             bindings = <
 &kp Q             &kp W         &kp E         &kp R             &kp T                                       &kp Y        &kp U  &kp I      &kp O    &kp P
 &mt LCTRL A       &kp S         &kp D         &kp F             &kp G        &trans          &kp MINUS      &kp H        &kp J  &kp K      &lt 5 L  &lt 6 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 4 COLON     &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V             &kp B        &lt 4 COLON     &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
 &kp LCTRL         &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 INT_HENKAN  &lt 2 SPACE  &kp LS(CAPS)    &kp BACKSPACE  &lt 1 ENTER                             &mt RCTRL ESCAPE
             >;
 
@@ -83,10 +90,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                     &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans    &trans  &trans                          &trans
+&kp ASTERISK          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                    &trans      &trans          &trans          &trans           &trans
+&mt LCTRL TAB         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS   &trans    &trans  &kp DELETE  &kp F2          &kp UP_ARROW    &trans           &trans
+&mt LEFT_SHIFT SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &trans    &trans  &kp TAB     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&kp COLON             &kp NUMBER_0  &number00     &kp PERIOD    &trans     &trans    &trans  &trans                                                       &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -116,8 +123,8 @@
 
         MOUSE {
             bindings = <
-&kp LC(Z)  &kp LC(Y)  &trans     &trans     &trans                    &trans    &trans    &trans    &trans    &trans
-&kp LC(C)  &kp LC(X)  &kp LG(V)  &kp LC(V)  &trans  &trans    &trans  &trans    &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&kp LC(Z)  &kp LC(Y)  &trans     &trans     &trans                    &kp DEL   &trans    &trans    &trans    &trans
+&kp LC(C)  &kp LC(X)  &kp LG(V)  &kp LC(V)  &trans  &trans    &trans  &kp TAB   &mkp MB1  &mkp MB3  &mkp MB2  &trans
 &kp LC(A)  &trans     &trans     &trans     &trans  &trans    &trans  &mkp MB5  &mkp MB4  &trans    &trans    &trans
 &trans     &trans     &trans     &trans     &trans  &trans    &trans  &trans                                  &trans
             >;
