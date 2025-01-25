@@ -66,15 +66,6 @@
 
             tap-ms = <20>;
         };
-
-        scroll_left_right: behavior_sensor_rotate_LR {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
-
-            tap-ms = <20>;
-            label = "SCROLL_LEFT_RIGHT";
-        };
     };
 
     keymap {
@@ -145,7 +136,7 @@
 &trans     &trans     &trans                  &trans             &trans         &trans    &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_left_right>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
@@ -156,7 +147,7 @@
 &kp COLON             &kp KP_NUMBER_0  &number00        &kp PERIOD       &trans     &trans    &trans  &trans                                       &trans
             >;
 
-            sensor-bindings = <&scroll_left_right>;
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
