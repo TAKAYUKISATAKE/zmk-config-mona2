@@ -13,7 +13,15 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        selectAll {
+            bindings = <&kp LC(A)>;
+            key-positions = <11 10>;
+            layers = <0>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -112,10 +120,10 @@
 
         layer_5 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&kp LC(Z)  &kp LC(Y)  &trans     &trans     &trans                    &trans  &trans  &trans  &trans  &trans
+&kp LC(C)  &kp LC(X)  &kp LG(V)  &kp LC(V)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans     &trans     &trans     &trans  &trans    &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
